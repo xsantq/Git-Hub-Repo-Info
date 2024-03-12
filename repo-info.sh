@@ -4,7 +4,7 @@
 # Author: Cem VAROL
 # Date: 01/19/24
 # Version: V1
-# Desc: AWS Usage Reporter
+# Desc: Github repo info
 # This script uses Github API for user and branch info
 #############################################
 
@@ -50,7 +50,7 @@ function list_users_with_read_access {
 function list_branches {
     local endpoint="repos/${REPO_OWNER}/${REPO_NAME}/branches"
 
-      Fetch the list of branches on the repository
+    #Fetch the list of branches on the repository
     branches="$(github_api_get "$endpoint" | jq '.[] | .name')"
 
     # Display the list of branches
